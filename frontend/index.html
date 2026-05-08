@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DAO Governance dApp</title>
+  <script src="https://cdn.jsdelivr.net/npm/ethers@6.13.4/dist/ethers.umd.min.js"></script>
+</head>
+<body>
+  <h1>DAO Governance Dashboard</h1>
+
+  <button id="connectBtn">Connect Wallet</button>
+  <p><b>Account:</b> <span id="account">Not connected</span></p>
+
+  <h2>Token Info</h2>
+  <p><b>Token Balance:</b> <span id="balance">-</span></p>
+  <p><b>Voting Power:</b> <span id="votes">-</span></p>
+  <p><b>Delegate Address:</b> <span id="delegate">-</span></p>
+
+  <h2>Delegate Votes</h2>
+  <input id="delegateInput" placeholder="Delegate address">
+  <button id="delegateBtn">Delegate</button>
+
+  <h2>Proposal</h2>
+  <input id="proposalIdInput" placeholder="Proposal ID">
+  <button id="proposalStateBtn">Check Proposal State</button>
+  <p><b>Proposal State:</b> <span id="proposalState">-</span></p>
+
+  <h2>Vote</h2>
+  <button onclick="castVote(0)">Vote Against</button>
+  <button onclick="castVote(1)">Vote For</button>
+  <button onclick="castVote(2)">Abstain</button>
+
+  <script src="./app.js"></script>
+</body>
+</html>
